@@ -17,5 +17,7 @@ fn main() {
 //             _ => {}
 //         }
     }
+
+//    Runs in 1.28 µs
     println!("Solution: {}\nElapsed time: {:?}", sum, instant.elapsed());
 }

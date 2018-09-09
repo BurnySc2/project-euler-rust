@@ -26,5 +26,7 @@ fn lcm(a: u64, b: u64) -> u64 {
 fn main() {
     let instant = Instant::now();
     let solution = (2..21).fold(1, |product: u64, x: u64| {return lcm(product, x)});
+
+//    Runs in 640-960 ns
     println!("Solution: {}\nElapsed time: {:?}", solution, instant.elapsed());
 }

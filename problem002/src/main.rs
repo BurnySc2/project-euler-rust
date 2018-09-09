@@ -1,10 +1,5 @@
 #[allow(dead_code)]
 use std::time::{Instant};
-//use std::ops::{Range};
-
-//fn fib(a: u32, b: u32) -> u32 {
-//    a + b
-//}
 
 fn main() {
     let instant = Instant::now();
@@ -25,5 +20,7 @@ fn main() {
             sum += b;
         }
     }
+
+//    Runs in 320 ns
     println!("Solution: {}\nElapsed time: {:?}", sum, instant.elapsed());
 }

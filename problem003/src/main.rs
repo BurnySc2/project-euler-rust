@@ -1,8 +1,6 @@
 #[allow(dead_code)]
 #[allow(non_snake_case)]
 use std::time::{Instant};
-//use std::ops::{Range};
-//use std::collections::HashMap;
 use std::collections::HashSet;
 use std::cmp;
 
@@ -14,7 +12,7 @@ fn is_prime(number: &u64, primesHash: &mut HashSet<u64>, primes: &mut Vec<u64>) 
 
 
     let upperLimit = (*number as f64).sqrt() as u64 + 1;
-    for i: u64 in 2..upperLimit {
+    for i in 2..upperLimit {
         match i {
             _x2 if number % i == 0 => {
                 return false;
@@ -35,7 +33,6 @@ fn main() {
     let mut primes: Vec<u64> = vec![];
 
     let mut largestPrime: u64 = 0;
-//    let mut targetNumber: u64 = 13195 ;
     let mut targetNumber: u64 = 600851475143;
 
     let mut currentNumber: u64 = 2;
@@ -50,20 +47,17 @@ fn main() {
         }
 
         if targetNumber == 1 {
-            println!("Number found!");
+//            println!("Number found!");
             break;
         }
         if targetNumber < currentNumber {
-            println!("Breaking because current number {} is bigger than targetNumber {}. Something is wrong.", currentNumber, targetNumber);
+//            println!("Breaking because current number {} is bigger than targetNumber {}. Something is wrong.", currentNumber, targetNumber);
             break;
         }
 
         currentNumber += 1;
     }
-//    println!("Is 4 prime: {}", is_prime(&(4 as u64), &mut primesHash, &mut primes));
 
-
-
-
+//  Runs in 3.5 ms
     println!("Solution: {}\nElapsed time: {:?}", largestPrime, instant.elapsed());
 }

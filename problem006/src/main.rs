@@ -8,5 +8,7 @@ fn main() {
     let sumOfSquares = (1..101).fold(0, |sum: u32, x: u32| {return sum + x.pow(2) as u32});
 //    println!("Square of sum {}, sum of squares {}", squareOfSum, sumOfSquares);
     let solution = squareOfSum - sumOfSquares;
+
+//    Runs in 320 ns
     println!("Solution: {}\nElapsed time: {:?}", solution, instant.elapsed());
 }

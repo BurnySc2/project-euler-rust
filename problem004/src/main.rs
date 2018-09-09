@@ -3,7 +3,6 @@
 use std::time::{Instant};
 use std::collections::HashSet;
 use std::cmp;
-//use std::u32::MAX as u32max;
 
 fn is_palin(number: u32) -> bool {
     let string = number.to_string();
@@ -30,5 +29,7 @@ fn main() {
             }
         }
     }
+
+//  Runs in 22 ms
     println!("Solution: {}\nElapsed time: {:?}", greatest, instant.elapsed());
 }
